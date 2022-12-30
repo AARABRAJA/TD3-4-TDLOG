@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles/fleet.css" .centered-element {
+
+   }>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Bataille navale</title>
+</head>
+<body>
+<div class="vertical-container">
+    <div class="form-result" id="create-game-result"></div>
+    <div class="centered-form">
+        <form id="create-game-form">
+            <label for="player-name">Ton pseudo:</label><br>
+            <input type="text" id="player-name" name="player_name" required><br><br>
+            <label for="player-name">Identifiant de la partie:</label><br>
+            <input type="number" id="player-name" name="player_name" required value="4"><br><br>
+            <input class="submit-button" type="submit" value="Changer ma flotte">
+            <label for="choisir le type de vaisseau">Choisir le type de vaisseau:</label>
+            <select name="vaisseau" id="vaisseau.id">
+                <option value="">--Choisir le type--</option>
+                <option value="Cruiser">Cruiser</option>
+                <option value="Destroyer">Destroyer</option>
+                <option value="Frigate">Frigate</option>
+                <option value="Submarine">Submarine</option>
+            </select>
+            <label for="x">X:</label><br>
+            <input type="number" id="x" name="x" required value="0"><br>
+            <label for="y">Y:</label><br>
+            <input type="number" id="y" name="y" required value="0"><br>
+            <label for="z">Z:</label><br>
+            <input type="number" id="z" name="z" required value="0"><br>
+            <input class="submit-button" type="submit" value="Valider">
+            <button type="button" onclick="toggle_text('span_txt2');">Valider</button><br>
+            <span id="span_txt2">Vaisseau crée avec succès</span>
+            <script type="text/javascript">
+            function toggle_text(id) {
+            var span = document.getElementById(id);
+            if(span.style.display == "none") {
+            span.style.display = "inline";
+            } else {
+            span.style.display = "none";
+            }
+            }
+        </script> <br>
+
+        </form>
+        <table align="right">
+            <tr><td>Vessel</td><td>Coordonnées</td><td>Résistance</td><td>Arme</td><td>Munitions</td><td>Rayon d'action</td></tr>
+        </table>
+        <button>Jouez!</button>
+            
+    </div>
+</div>
+<script src="scripts/manage-fleet.js"></script>
